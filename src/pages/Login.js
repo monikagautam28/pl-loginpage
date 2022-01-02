@@ -7,29 +7,36 @@ import instagram from "./images/instagram.svg";
 import twitter from "./images/twitter.svg";
 import googleplay from "./images/googleplay.svg";
 
-import Slider from "react-slick";
+//import Slider from "react-slick";
 
 class Login extends React.Component {
   constructor() {
     super();
     this.state = {
       phone: "",
+      platform: "android",
+      appName: "prepladder",
+      version: "70",
+      send_otp_on_whatsapp: "0",
+      country_code: "+91",
     };
   }
 
   submit() {
-   let url = "https://web.prepladder.com/v2/sendOtp";
-   let data = this.state;
-   fetch(url,{
-     method:'POST',
-     headers:{
-       "Content-Type":"application/json",
-       "Accept":"application/json"
-     },
-     body:JSON.stringify(data)
-   }).then((result)=>{result.json().then((resp)=>{
-     console.warn("resp",resp)
-   })})
+    let url = "https://web.prepladder.com/v2/sendOtp";
+    let data = this.state;
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((result) => {
+      result.json().then((resp) => {
+        console.warn("resp", resp);
+      });
+    });
   }
 
   render() {
@@ -125,7 +132,7 @@ class Login extends React.Component {
                         </div>
                         <div className="login_button">
                           <button
-                          type="button"
+                            type="button"
                             onClick={() => {
                               this.submit();
                             }}
