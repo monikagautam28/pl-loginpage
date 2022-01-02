@@ -1,0 +1,149 @@
+.login_main-container
+{
+ width: 100%;
+ display: flex;
+
+ align-items: center;
+
+ &-left
+ {
+  
+   width: 50%;  
+ 
+
+ }
+}
+.slider_image
+{
+    width: 100%;;
+    margin: 0 auto;
+    max-height: 32rem;
+}
+
+.login_right
+{
+    width: 50%;  
+    border-radius: 2px;
+  
+    &-outer
+    {
+        width: 80%;
+        margin: 0 auto;
+        padding:2rem 0;
+        max-width: 40rem;
+       
+        }
+}
+.login_section
+{
+    background-color: #fff;
+    padding: 4rem 2.4rem;
+    width:100%;
+    border-radius: 1.6rem;
+  
+
+    & h4{
+        color:#3c4852;
+        font-weight: 600;
+        line-height: 30px;
+        font-size: 2.4rem;
+        margin-bottom: .8rem;
+    }
+    &-para{
+        color:#7A8B94;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+    }
+}
+
+.login_footer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f8ff;
+    border-radius: 13px;
+    padding:2rem 5.2rem;
+    max-width :117rem;
+    margin:0 auto;
+   width: 90%;
+   &-left h4
+   {
+       font-weight: 600;
+       font-size: 2rem;
+       line-height: 28px;
+       color: #285078;
+       font-family: averta,Fallback,sans-serif;
+   }
+
+   
+
+    &-right
+    {
+      align-items: center;
+    
+   &-img{
+       margin-left: 2rem;
+   }
+       
+    }
+  
+    
+}
+.login_mobile-no{
+    margin:2rem 0 1rem;
+    width: 100%;
+    border:1px solid  #dde6ed;
+    border-radius: 4px ;
+    padding: 1.3rem 1.6rem;
+    align-items:center ;
+    display: flex;
+
+    &-left
+    {
+      & h5{
+padding-right: 1rem;
+      }
+    }
+    &-right input
+    {
+       width: 100%;
+       border:none;
+       padding:0 1.2rem;
+       border-left: 1px solid #dde6ed;
+       color: #3c4852;
+       background: transparent;
+       outline: none;
+    }
+}
+
+.login_button 
+{
+    margin-bottom: 1rem;
+
+& button{
+    width: 100%;
+    border: none;
+    padding: 1.5rem 5rem;
+    color: #fff;
+    font-weight: 600;
+    background: #3C4852;
+    border-radius: .8rem;
+    font-size: 1.4rem;
+    font-family: averta,Fallback,sans-serif!important;
+    align-items: center;
+}
+
+
+}
+.login_form-para
+{
+    font-weight: 400;
+    font-size: 1.2rem;
+    color:#7a8b94;
+
+    & span{
+        color:#3C4852
+    }
+}

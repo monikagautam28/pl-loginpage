@@ -1,0 +1,38 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: auto;
+    align-items: center;
+
+  
+    &_logo
+    {
+       width: 16rem;
+    }
+
+    &-right
+    {
+        display: flex;
+        align-items: center;
+
+        &_follow
+        {
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--grey-color);
+            padding-right: 1.6rem;
+            font-family: averta,Fallback,sans-serif;
+        }
+        &_list
+        {
+            display: flex;
+        }
+    }
+
+}
+
+li{
+    list-style: none;
+    padding-right: 1.2rem;
+}

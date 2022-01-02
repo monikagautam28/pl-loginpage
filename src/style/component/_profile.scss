@@ -1,0 +1,50 @@
+.common_page_layout{
+    width: 100%;
+    margin: 0 auto;
+
+    &--inner{
+        display: flex;
+        align-items: center;
+        background:#fff;
+    box-shadow: 0 16px 32px rgb(233 238 242 / 40%);
+    border-radius: .8rem;
+    padding: 2rem;
+    }
+
+    &--image{
+        min-width: 7.6rem;
+        width: 7.6rem;
+    
+    
+    }
+
+    &--flex{
+        display: flex;
+        
+    }
+    &-left
+    {
+  
+        border-radius: 50%;
+        margin-right: 2rem;
+            height: 7.6rem;
+    }
+}
+
+.profile_username{
+    font-size: 2rem;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 15ch;
+    margin: 0 1rem .6rem 0;
+}
+.profile_phoneno{
+    color: #7a8b94;
+    font-size: 1.4rem; 
+}
+.profile_space{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

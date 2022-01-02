@@ -1,0 +1,53 @@
+.dashboard_header{
+    padding:1.6rem 0;
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    z-index: 4;
+    background: #fff;
+    top: 0;
+
+    &-container
+    {
+     
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+    }
+
+    &-left{
+        display: flex;
+        align-items: center;
+
+       
+        &-2{
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 24px;
+            color:#3c4852;
+            border-left: 2px solid #e9eef1;
+            border-radius: .2rem;
+            padding: 0 2.4rem;
+            position: relative;
+        }
+    }
+    
+
+}
+.header_logo{
+    width: 15rem;
+max-width: 100%;
+padding-right: 2.4rem;
+}
+.downarrow{
+    padding-left: 1rem;
+    padding-bottom: .3rem;
+}
+.appheader
+{
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    border: 1px solid #e9eef2;
+}
