@@ -1,7 +1,9 @@
 .center_section{
     flex-grow: 1;
     flex-shrink: 1;
-    padding: 4rem;
+    padding: 4rem ;
+    height: 100%;
+overflow: auto;
 
 
     &--background{
@@ -12,7 +14,7 @@
         background-position: 100% 100%;
         margin-bottom: 2.4rem;
         display: inline-block;
-        width: 100%; 
+        width: 100%;
 
 
         & h2{
@@ -154,5 +156,9 @@
 }
 .card{
     display: flex;
+
+}
+.center_section--width{
+display: flex;
 
 }

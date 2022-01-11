@@ -2,7 +2,7 @@
 {
  width: 100%;
  display: flex;
-
+margin: 3rem 0;
  align-items: center;
 
  &-left
@@ -146,4 +146,8 @@ padding-right: 1rem;
     & span{
         color:#3C4852
     }
+}
+.margin_top
+{
+    margin-top: 2rem;
 }

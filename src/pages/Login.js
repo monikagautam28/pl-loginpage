@@ -7,7 +7,7 @@ import instagram from "./images/instagram.svg";
 import twitter from "./images/twitter.svg";
 import googleplay from "./images/googleplay.svg";
 
-//import Slider from "react-slick";
+import Slider from "react-slick";
 
 class Login extends React.Component {
   constructor() {
@@ -19,6 +19,8 @@ class Login extends React.Component {
       version: "70",
       send_otp_on_whatsapp: "0",
       country_code: "+91",
+      otp: "",
+      session_id: "",
     };
   }
 
@@ -34,11 +36,46 @@ class Login extends React.Component {
       body: JSON.stringify(data),
     }).then((result) => {
       result.json().then((resp) => {
-        console.warn("resp", resp);
+        console.log(resp)
+        if (resp.message == "OTP sent successfully") {
+          sessionStorage.setItem('session_id', true)
+          this.setState({ session_id: resp.data.session_id });
+        }
       });
     });
   }
-
+  verifyotp(mysessionid) {
+    let url = "https://web.prepladder.com/v2/verifyOtp";
+    let data = {
+      appName: "prepladder",
+      platform: "android",
+      version: "70",
+      otp: this.state.otp,
+      session_id: mysessionid,
+    };
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((result) => {
+      result.json().then((resp) => {
+        console.log(resp)
+        if (resp.status == true) {         
+          localStorage.setItem('login', JSON.stringify(resp.data[0]))
+         window.location.href = "/rightbar";
+          sessionStorage.removeItem('session_id')
+        }
+      });
+    });
+  }
+  componentDidMount() {
+    if(localStorage.getItem('login')){
+      window.location.href = "/rightbar";
+    }
+  }
   render() {
     const settings = {
       dots: true,
@@ -47,6 +84,10 @@ class Login extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
     };
+    let check_id;
+    if(sessionStorage.getItem('session_id')){
+      check_id = sessionStorage.getItem('session_id')
+    }
     return (
       <>
         <div className="container">
@@ -114,6 +155,8 @@ class Login extends React.Component {
                         </p>
                       </div>
                       <div>
+                      {
+                        !check_id ?  <>
                         <div className="login_mobile-no">
                           <div className="login_mobile-no-left">
                             <h5>+91</h5>
@@ -121,7 +164,8 @@ class Login extends React.Component {
                           <div className="login_mobile-no-right">
                             <input
                               type="text"
-                              value={this.state.phone}
+                              maxLength="10"
+                              value={this.state.phone.replace(/[^0-9.]/g, "")}
                               name="phone"
                               onChange={(data) => {
                                 this.setState({ phone: data.target.value });
@@ -140,6 +184,38 @@ class Login extends React.Component {
                             Continue
                           </button>
                         </div>
+                       </> : <>
+                        <div className="login_mobile-no">
+                          
+                          <div className="login_mobile-no-right">
+                            <input
+                              type="text"
+                              maxLength="6"
+                              value={this.state.otp.replace(/[^0-9.]/g, "")}
+                              name="otp"
+                              onChange={(data) => {
+                                this.setState({ otp: data.target.value });
+                              }}
+                              placeholder="Enter otp for verification"
+                            ></input>
+                          </div>
+                        </div>
+                        <div className="login_button"> 
+                        <div className="margin_top">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              this.verifyotp(this.state.session_id);
+                            }}
+                          >
+                            verify otp
+                          </button>
+                        </div>
+                        </div>
+                        </>
+                      }
+                     
+                    
                         <div className="login_form-para">
                           <p>
                             By signing up, you agree to{" "}

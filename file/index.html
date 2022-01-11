@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"
+    />
+    <title>MCQ of the day</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+     .shimmerContent * {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .shimmer {
+        /* overflow: hidden; */
+        padding: 12px 0;
+        background: #fff;
+        /* max-height: 100vh; */
+        left: 0;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+      }
+      .shimmer-head {
+        width: 200px;
+        height: 20px;
+        border-radius: 15px;
+      }
+      .shimmer hr {
+        margin: 8px 0;
+        border: 1px solid #eff1f3;
+      }
+      .shimmer .QTitle {
+        width: 100px;
+        height: 15px;
+        border-radius: 12px;
+      }
+      .shimmer .Qname {
+        height: 65px;
+        margin: 15px auto 20px !important;
+      }
+      .shimmer h5 {
+        height: 12px;
+        width: 70px;
+        border-radius: 12px;
+      }
+      .shimmer ul li {
+        height: 52px;
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        margin: 12px 0 0;
+      }
+      .shimmer-btn {
+        margin: auto;
+        width: 150px;
+        height: 23px;
+        border-radius: 5px;
+      }
+      .animate {
+        animation: shimmer 2s infinite linear;
+        background: linear-gradient(
+          to right,
+          #eff1f3 4%,
+          #e2e2e2 25%,
+          #eff1f3 36%
+        );
+        background-size: 1000px 100%;
+      }
+      @keyframes shimmer {
+        0% {
+          background-position: -1000px 0;
+        }
+        100% {
+          background-position: 1000px 0;
+        }
+      }
+      .shimmer .containers {
+        margin: 0 auto;
+        /* padding: 0 20px; */
+        /* width: 100%; */
+        max-width: 900px !important;;
+        width: 90%;
+        /* margin: auto; */
+      }
+
+     
+      .shimmerHome {
+        padding: 0;
+        max-height: 100vh;
+        left: 0;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        overflow: hidden;
+      }
+      .shimmerHome .Qname {
+        flex: 1;
+        width: 100%;
+      }
+
+      .shimmerHome .Qname .containers {
+        min-height: 100%;
+        border-radius: 5px;
+      }
+
+      .shimmerHome .shimmerContent {
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        padding: 10px 20px;
+      }
+      .shimmerHome .shimmer-foot {
+        margin-top: auto;
+        /* display: none; */
+      }
+      .shimmerHome .shimmer-foot .containers {
+        display: flex;
+        justify-content: space-between;
+      }
+      .shimmerHome .shimmer-foot .containers a {
+        height: 35px;
+        width: 100%;
+      }
+      .shimmerHome .shimmer-foot .containers a + a {
+        margin-left: 15px;
+      }
+      @keyframes ldio-5lpg8m9jx18 {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .ldio-5lpg8m9jx18 div {
+        left: 98px;
+        top: 83px;
+        position: absolute;
+        animation: ldio-5lpg8m9jx18 linear 1s infinite;
+        background: #26b3f9;
+        width: 4px;
+        height: 10px;
+        border-radius: 2px / 2.3000000000000003px;
+        transform-origin: 2px 17px;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(1) {
+        transform: rotate(0deg);
+        animation-delay: -0.9090909090909091s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(2) {
+        transform: rotate(32.72727272727273deg);
+        animation-delay: -0.8181818181818182s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(3) {
+        transform: rotate(65.45454545454545deg);
+        animation-delay: -0.7272727272727273s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(4) {
+        transform: rotate(98.18181818181819deg);
+        animation-delay: -0.6363636363636364s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(5) {
+        transform: rotate(130.9090909090909deg);
+        animation-delay: -0.5454545454545454s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(6) {
+        transform: rotate(163.63636363636363deg);
+        animation-delay: -0.45454545454545453s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(7) {
+        transform: rotate(196.36363636363637deg);
+        animation-delay: -0.36363636363636365s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(8) {
+        transform: rotate(229.0909090909091deg);
+        animation-delay: -0.2727272727272727s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(9) {
+        transform: rotate(261.8181818181818deg);
+        animation-delay: -0.18181818181818182s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(10) {
+        transform: rotate(294.54545454545456deg);
+        animation-delay: -0.09090909090909091s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(11) {
+        transform: rotate(327.27272727272725deg);
+        animation-delay: 0s;
+        background: #26b3f9;
+      }
+      .loadingio-spinner-spinner-ttivut7766 {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        overflow: hidden;
+        /* background: #ffffff; */
+      }
+      .ldio-5lpg8m9jx18 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0; /* see note above */
+      }
+      .ldio-5lpg8m9jx18 div {
+        box-sizing: content-box;
+      }
+      .flex-center-loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 1000000;
+        background: white;
+      }
+      /* generated by https://loading.io/ */
+    </style>
+  </head>
+
+  <body>
+    <div class="flex-center-loader">
+      <div class="loadingio-spinner-spinner-ttivut7766">
+        <div class="ldio-5lpg8m9jx18">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shimmer shimmerHome">
+      <div class="shimmerContent">
+        <div class="containers shimmerTop">
+          <div class="shimmer-head animate"></div>
+          <hr class="animate" />
+          <div class="QTitle animate"></div>
+        </div>
+        <div class="Qname">
+          <div class="animate containers"></div>
+        </div>
+        <div class="containers">
+          <h5 class="animate"></h5>
+          <ul type="none">
+            <li class="animate"></li>
+            <li class="animate"></li>
+            <li class="animate"></li>
+            <li class="animate"></li>
+          </ul>
+        </div>
+
+        <div id="sm-ft" class="shimmer-foot">
+          <hr class="animate" />
+          <div class="containers">
+            <div class="shimmer-btn animate"></div>
+          </div>
+        </div>
+
+        <div id="lg-ft" class="shimmer-foot">
+          <hr class="animate" />
+          <div class="containers">
+            <a class="shimmer-btn animate"></a>
+            <a class="shimmer-btn animate"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="prepladder"></div>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <input type="hidden" id="version" value="69" />
+    <input type="hidden" id="page" value="0" />
+    <input type="hidden" id="email" value="paras.negi@prepladder.com" />
+    <input type="hidden" id="apiKey" value="prpldr_1629744345:6123ecd96c1bd:1175647" />
+    <input type="hidden" id="platform" value="web" />
+    <input type="hidden" id="appName" value="prepladder" />
+    <input type="hidden" id="qBankID" value="38713" />
+    <input type="hidden" id="userID" value="1175647" />
+    <input type="hidden" id="isLiveServer" value="1" />
+
+    <script>
+      if (document.getElementById("page").value === "1") {
+        document.getElementById("lg-ft").style.display = "block";
+      } else {
+        document.getElementById("sm-ft").style.display = "block";
+      }
+    </script>
+
+    <style type="text/css">
+      .table-striped > tbody > tr:nth-child(even) > td,
+      .table-striped > tbody > tr:nth-child(even) > th,
+      .table-striped > tbody > tr:nth-child(odd) > td,
+      .table-striped > tbody > tr:nth-child(odd) > th {
+        background: 0 0 !important;
+        color: #3c4852 !important;
+        border: 1px solid var(--border-1) !important;
+        padding: 10px 10px !important;
+      }
+      .table-striped > tbody > tr:nth-child(1) > td,
+      .table-striped > tbody > tr:nth-child(1) > th {
+        background-color: none !important;
+      }
+      .solutions-body span.math-tex {
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+      @media only screen and (max-width: 600px) {
+        .solutions-body span.math-tex {
+          font-size: 13px;
+        }
+      }
+    </style>
+
+    <script
+      id="MathJax-script"
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script>
+      (function () {
+        function callback() {
+          document.querySelector(".shimmer").style.display = "none";
+        }
+        function olderCallback() {
+          document.querySelector(".flex-center-loader").style.display = "none";
+        }
+
+        var appCurrentVersions = {
+          ios: {
+            version: 68,
+            allowCallback: true,
+          },
+          android: {
+            version: 183,
+            allowCallback: true,
+          },
+          web: {
+            version: 66,
+            allowCallback: true,
+          },
+        };
+
+        var modulesScripts = [
+          "https://image.prepladder.com/catalogue/qbank-dashboard-module.1.7.5.js",
+          "https://image.prepladder.com/catalogue/qbank-dashboard-module.1.0.1.js",
+        ];
+
+        var version =
+          (document.getElementById("version") &&
+            document.getElementById("version").value) ||
+          0;
+        var platform =
+          (document.getElementById("platform") &&
+            document.getElementById("platform").value) ||
+          "web";
+
+        var minVersion = appCurrentVersions[platform].version;
+
+        var script = document.createElement("script");
+        script.src = getVersion(version, minVersion, modulesScripts);
+        script.onload =
+          Number(version) < Number(minVersion) &&
+          appCurrentVersions[platform].allowCallback
+            ? callback
+            : olderCallback;
+        document.body.appendChild(script);
+        function getVersion(ver, minVer, scripts) {
+          if (Number(ver) < Number(minVer)) {
+            return scripts[0];
+          }
+          return scripts[1];
+        }
+      })();
+    </script>
+
+    <!-- <script
+      type="text/javascript"
+      src="https://image.prepladder.com/catalogue/qbank-dashboard-module.1.7.5.js"
+    ></script> -->
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"
+    />
+    <title>MCQ of the day</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+     .shimmerContent * {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .shimmer {
+        /* overflow: hidden; */
+        padding: 12px 0;
+        background: #fff;
+        /* max-height: 100vh; */
+        left: 0;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+      }
+      .shimmer-head {
+        width: 200px;
+        height: 20px;
+        border-radius: 15px;
+      }
+      .shimmer hr {
+        margin: 8px 0;
+        border: 1px solid #eff1f3;
+      }
+      .shimmer .QTitle {
+        width: 100px;
+        height: 15px;
+        border-radius: 12px;
+      }
+      .shimmer .Qname {
+        height: 65px;
+        margin: 15px auto 20px !important;
+      }
+      .shimmer h5 {
+        height: 12px;
+        width: 70px;
+        border-radius: 12px;
+      }
+      .shimmer ul li {
+        height: 52px;
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        margin: 12px 0 0;
+      }
+      .shimmer-btn {
+        margin: auto;
+        width: 150px;
+        height: 23px;
+        border-radius: 5px;
+      }
+      .animate {
+        animation: shimmer 2s infinite linear;
+        background: linear-gradient(
+          to right,
+          #eff1f3 4%,
+          #e2e2e2 25%,
+          #eff1f3 36%
+        );
+        background-size: 1000px 100%;
+      }
+      @keyframes shimmer {
+        0% {
+          background-position: -1000px 0;
+        }
+        100% {
+          background-position: 1000px 0;
+        }
+      }
+      .shimmer .containers {
+        margin: 0 auto;
+        /* padding: 0 20px; */
+        /* width: 100%; */
+        max-width: 900px !important;;
+        width: 90%;
+        /* margin: auto; */
+      }
+
+     
+      .shimmerHome {
+        padding: 0;
+        max-height: 100vh;
+        left: 0;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        overflow: hidden;
+      }
+      .shimmerHome .Qname {
+        flex: 1;
+        width: 100%;
+      }
+
+      .shimmerHome .Qname .containers {
+        min-height: 100%;
+        border-radius: 5px;
+      }
+
+      .shimmerHome .shimmerContent {
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        padding: 10px 20px;
+      }
+      .shimmerHome .shimmer-foot {
+        margin-top: auto;
+        /* display: none; */
+      }
+      .shimmerHome .shimmer-foot .containers {
+        display: flex;
+        justify-content: space-between;
+      }
+      .shimmerHome .shimmer-foot .containers a {
+        height: 35px;
+        width: 100%;
+      }
+      .shimmerHome .shimmer-foot .containers a + a {
+        margin-left: 15px;
+      }
+      @keyframes ldio-5lpg8m9jx18 {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .ldio-5lpg8m9jx18 div {
+        left: 98px;
+        top: 83px;
+        position: absolute;
+        animation: ldio-5lpg8m9jx18 linear 1s infinite;
+        background: #26b3f9;
+        width: 4px;
+        height: 10px;
+        border-radius: 2px / 2.3000000000000003px;
+        transform-origin: 2px 17px;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(1) {
+        transform: rotate(0deg);
+        animation-delay: -0.9090909090909091s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(2) {
+        transform: rotate(32.72727272727273deg);
+        animation-delay: -0.8181818181818182s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(3) {
+        transform: rotate(65.45454545454545deg);
+        animation-delay: -0.7272727272727273s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(4) {
+        transform: rotate(98.18181818181819deg);
+        animation-delay: -0.6363636363636364s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(5) {
+        transform: rotate(130.9090909090909deg);
+        animation-delay: -0.5454545454545454s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(6) {
+        transform: rotate(163.63636363636363deg);
+        animation-delay: -0.45454545454545453s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(7) {
+        transform: rotate(196.36363636363637deg);
+        animation-delay: -0.36363636363636365s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(8) {
+        transform: rotate(229.0909090909091deg);
+        animation-delay: -0.2727272727272727s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(9) {
+        transform: rotate(261.8181818181818deg);
+        animation-delay: -0.18181818181818182s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(10) {
+        transform: rotate(294.54545454545456deg);
+        animation-delay: -0.09090909090909091s;
+        background: #26b3f9;
+      }
+      .ldio-5lpg8m9jx18 div:nth-child(11) {
+        transform: rotate(327.27272727272725deg);
+        animation-delay: 0s;
+        background: #26b3f9;
+      }
+      .loadingio-spinner-spinner-ttivut7766 {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        overflow: hidden;
+        /* background: #ffffff; */
+      }
+      .ldio-5lpg8m9jx18 {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0; /* see note above */
+      }
+      .ldio-5lpg8m9jx18 div {
+        box-sizing: content-box;
+      }
+      .flex-center-loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 1000000;
+        background: white;
+      }
+      /* generated by https://loading.io/ */
+    </style>
+  </head>
+
+  <body>
+    <div class="flex-center-loader">
+      <div class="loadingio-spinner-spinner-ttivut7766">
+        <div class="ldio-5lpg8m9jx18">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="shimmer shimmerHome">
+      <div class="shimmerContent">
+        <div class="containers shimmerTop">
+          <div class="shimmer-head animate"></div>
+          <hr class="animate" />
+          <div class="QTitle animate"></div>
+        </div>
+        <div class="Qname">
+          <div class="animate containers"></div>
+        </div>
+        <div class="containers">
+          <h5 class="animate"></h5>
+          <ul type="none">
+            <li class="animate"></li>
+            <li class="animate"></li>
+            <li class="animate"></li>
+            <li class="animate"></li>
+          </ul>
+        </div>
+
+        <div id="sm-ft" class="shimmer-foot">
+          <hr class="animate" />
+          <div class="containers">
+            <div class="shimmer-btn animate"></div>
+          </div>
+        </div>
+
+        <div id="lg-ft" class="shimmer-foot">
+          <hr class="animate" />
+          <div class="containers">
+            <a class="shimmer-btn animate"></a>
+            <a class="shimmer-btn animate"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="prepladder"></div>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <input type="hidden" id="version" value="69" />
+    <input type="hidden" id="page" value="0" />
+    <input type="hidden" id="email" value="paras.negi@prepladder.com" />
+    <input type="hidden" id="apiKey" value="prpldr_1629744345:6123ecd96c1bd:1175647" />
+    <input type="hidden" id="platform" value="web" />
+    <input type="hidden" id="appName" value="prepladder" />
+    <input type="hidden" id="qBankID" value="38713" />
+    <input type="hidden" id="userID" value="1175647" />
+    <input type="hidden" id="isLiveServer" value="1" />
+
+    <script>
+      if (document.getElementById("page").value === "1") {
+        document.getElementById("lg-ft").style.display = "block";
+      } else {
+        document.getElementById("sm-ft").style.display = "block";
+      }
+    </script>
+
+    <style type="text/css">
+      .table-striped > tbody > tr:nth-child(even) > td,
+      .table-striped > tbody > tr:nth-child(even) > th,
+      .table-striped > tbody > tr:nth-child(odd) > td,
+      .table-striped > tbody > tr:nth-child(odd) > th {
+        background: 0 0 !important;
+        color: #3c4852 !important;
+        border: 1px solid var(--border-1) !important;
+        padding: 10px 10px !important;
+      }
+      .table-striped > tbody > tr:nth-child(1) > td,
+      .table-striped > tbody > tr:nth-child(1) > th {
+        background-color: none !important;
+      }
+      .solutions-body span.math-tex {
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+      @media only screen and (max-width: 600px) {
+        .solutions-body span.math-tex {
+          font-size: 13px;
+        }
+      }
+    </style>
+
+    <script
+      id="MathJax-script"
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+
+    <script>
+      (function () {
+        function callback() {
+          document.querySelector(".shimmer").style.display = "none";
+        }
+        function olderCallback() {
+          document.querySelector(".flex-center-loader").style.display = "none";
+        }
+
+        var appCurrentVersions = {
+          ios: {
+            version: 68,
+            allowCallback: true,
+          },
+          android: {
+            version: 183,
+            allowCallback: true,
+          },
+          web: {
+            version: 66,
+            allowCallback: true,
+          },
+        };
+
+        var modulesScripts = [
+          "https://image.prepladder.com/catalogue/qbank-dashboard-module.1.7.5.js",
+          "https://image.prepladder.com/catalogue/qbank-dashboard-module.1.0.1.js",
+        ];
+
+        var version =
+          (document.getElementById("version") &&
+            document.getElementById("version").value) ||
+          0;
+        var platform =
+          (document.getElementById("platform") &&
+            document.getElementById("platform").value) ||
+          "web";
+
+        var minVersion = appCurrentVersions[platform].version;
+
+        var script = document.createElement("script");
+        script.src = getVersion(version, minVersion, modulesScripts);
+        script.onload =
+          Number(version) < Number(minVersion) &&
+          appCurrentVersions[platform].allowCallback
+            ? callback
+            : olderCallback;
+        document.body.appendChild(script);
+        function getVersion(ver, minVer, scripts) {
+          if (Number(ver) < Number(minVer)) {
+            return scripts[0];
+          }
+          return scripts[1];
+        }
+      })();
+    </script>
+
+    <!-- <script
+      type="text/javascript"
+      src="https://image.prepladder.com/catalogue/qbank-dashboard-module.1.7.5.js"
+    ></script> -->
+  </body>
+</html>
+
+{/* setTimeout(()=>{
+    console.log( document.getElementById('saleText').innerHTML=it.saleText);
+     //document.getElementById('saleText').innerHTML='monika';
+   },1000) */}
